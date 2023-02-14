@@ -8,13 +8,18 @@ export const NavBarStyled = styled.nav`
 
   display: flex;
   align-items: center;
-  padding: 2rem 0 2rem 2rem;
+  padding: 2rem 0 0 2rem;
+
+  position: fixed;
+  top: 0;
+
+  width: 100vw;
 
   & div.line {
     background-color: #fff;
     flex-grow: 3;
     height: 1px;
-    opacity: 0.5;
+    opacity: 0.3;
     margin-right: -1rem;
     z-index: 2;
   }
