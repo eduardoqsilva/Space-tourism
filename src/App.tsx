@@ -1,9 +1,19 @@
-import { NavBar } from "./components/nav/NavBar"
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './Routes'
+import { NavBar } from "./components/nav/NavBar";
+
+import { GlobalStyle } from './styles/global'
 
 function App() {
 
   return (
-    <NavBar/>
+    <>
+      <BrowserRouter>
+        <NavBar />
+        <Router />
+      </BrowserRouter>
+      <GlobalStyle />
+    </>
   )
 }
 
