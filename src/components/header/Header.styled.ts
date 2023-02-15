@@ -29,6 +29,5 @@ export const HeaderStyled = styled.header<headerType>`
     justify-items: center;
     /* grid-template-areas: 'a b'; */
     gap: 1rem;
-
   }
 `

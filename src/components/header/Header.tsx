@@ -1,14 +1,15 @@
 import { ReactNode } from 'react'
 import { HeaderStyled } from './Header.styled'
-import homeImg from '../../assets/background/home.jpg'
+
 
 interface HeaderType {
   children: ReactNode
+  Url: string
 }
 
-export function Header({ children }:HeaderType) {
+export function Header({ children, Url }:HeaderType) {
   return (
-    <HeaderStyled Url={homeImg}>
+    <HeaderStyled Url={Url}>
       <main className='pageContent'>
         {children}
       </main>
