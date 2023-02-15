@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const NavBarStyled = styled.nav`
+interface navtype {
+   menu?: boolean
+}
+
+export const NavBarStyled = styled.nav<navtype>`
  
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 500;
@@ -8,12 +12,14 @@ export const NavBarStyled = styled.nav`
 
   display: flex;
   align-items: center;
-  padding: 2rem 0 0 2rem;
+  padding: 0 0 0 2rem;
 
   position: fixed;
   top: 0;
 
   width: 100vw;
+
+  z-index: 10;
 
   & div.line {
     background-color: #fff;
@@ -25,6 +31,7 @@ export const NavBarStyled = styled.nav`
   }
   & a.logo{
     margin-right: 4rem;
+    margin-top: 3rem;
   }
   & a {
     text-decoration: none;
@@ -67,5 +74,91 @@ export const NavBarStyled = styled.nav`
   & ol.menu a {
     padding: 1rem 0;
   }
+  & div.menuIcon{
+    width: 45px;
+    height: 35px;
+    
+    position: fixed;
+    right: 1rem;
+    top: 3rem;
+    z-index: 20;
+    display: none;
+  }
 
+  & div.menuIcon label {
+    display: block;
+   
+    width: 45px;
+    height: 5px;
+
+    background-color: #fff;
+    border-radius: 2px;
+    position: absolute;
+
+    transition: 0.1s ease-in;
+    
+    &:nth-child(2){
+      top: 0px;
+    }
+    &:nth-child(3){
+      top: 15px;
+    }
+    &:nth-child(4){
+      bottom: 0px;
+    }
+  }
+  & #menu {
+    opacity: 0;
+  }
+
+  & #menu:checked ~ label:nth-of-type(1) {
+    transition: 0.1s ease-in;
+    transform: rotate(45deg);
+    top: 15px;
+  }
+  & #menu:checked ~ label:nth-of-type(2) {
+    transition: 0.1s ease-in;
+    opacity: 0;
+  }
+  & #menu:checked ~ label:nth-of-type(3) {
+    transition: 0.1s ease-in;
+    transform: rotate(-45deg);
+    bottom: 15px;
+  }
+
+
+ 
+  @media (max-width: 900px) {
+    & ol.menu{
+      ${(props) => props.menu 
+      ?
+        `display: flex;
+        flex-direction: column;
+        
+        gap: 2rem;
+        padding-top: 4rem;
+        list-style: none;`
+        
+        : `display: none;`
+      }
+      
+    }
+    & div.menuIcon {
+      display: block;
+    }
+    & ol.menu a.active::after {
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+    }
+    & ol.menu a{
+      display: block;
+    }
+    &{
+      align-items: flex-start;
+    }
+    & .line {
+        display: none;
+    }
+  }
 `

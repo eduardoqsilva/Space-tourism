@@ -16,6 +16,7 @@ export const HeaderStyled = styled.header<headerType>`
   & main.pageContent {
     position: absolute;
     bottom: 0;
+    z-index: 2;
 
     width: 100vw;
     min-height: calc(100vh - 9rem);
