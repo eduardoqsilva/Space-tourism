@@ -54,10 +54,10 @@ export function Tab() {
 
       <TabContainerStyled>
         <div className="tabs">
-          <ButtonTab className="tabs" active={activeIndex === 0} onClick={() => handleSetIndex(0)}>Moon</ButtonTab>
-          <ButtonTab className="tabs" active={activeIndex === 1} onClick={() => handleSetIndex(1)}>Mars</ButtonTab>
-          <ButtonTab className="tabs" active={activeIndex === 2} onClick={() => handleSetIndex(2)}>Europa</ButtonTab>
-          <ButtonTab className="tabs" active={activeIndex === 3} onClick={() => handleSetIndex(3)}>Titan</ButtonTab>
+          <ButtonTab  active={activeIndex === 0} onClick={() => handleSetIndex(0)}>Moon</ButtonTab>
+          <ButtonTab  active={activeIndex === 1} onClick={() => handleSetIndex(1)}>Mars</ButtonTab>
+          <ButtonTab  active={activeIndex === 2} onClick={() => handleSetIndex(2)}>Europa</ButtonTab>
+          <ButtonTab  active={activeIndex === 3} onClick={() => handleSetIndex(3)}>Titan</ButtonTab>
         </div>
         <div className="content">
           <h2>{tabsContent[activeIndex].title}</h2>
