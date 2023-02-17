@@ -9,6 +9,7 @@ export const NavBarStyled = styled.nav<navtype>`
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
+  margin-top: 1rem;
 
   display: flex;
   align-items: center;
@@ -31,7 +32,6 @@ export const NavBarStyled = styled.nav<navtype>`
   }
   & a.logo{
     margin-right: 4rem;
-    margin-top: 3rem;
   }
   & a {
     text-decoration: none;
@@ -45,7 +45,7 @@ export const NavBarStyled = styled.nav<navtype>`
     gap: 15%;
     flex-grow: 2;
     
-    padding: 3rem 3rem 3rem 4rem;
+    padding: 2.5rem 3rem 2.5rem 4rem;
 
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.09);
@@ -64,7 +64,7 @@ export const NavBarStyled = styled.nav<navtype>`
     content: '';
     display: block;
     position: absolute;
-    bottom: -3rem;
+    bottom: -2.5rem;
     left: -24px;
     
     width: calc(100% + 25px);
@@ -159,6 +159,9 @@ export const NavBarStyled = styled.nav<navtype>`
     }
     & .line {
         display: none;
+    }
+    & .logo {
+      margin-top: 3rem;
     }
   }
 `

@@ -1,5 +1,16 @@
+import { Header } from "../components/header/Header";
+
+import headerBack from '../assets/background/destination.jpg'
+import { Tab } from "../components/tabs/Tabs";
+
+
+
 export function Destination() {
+
+
   return(
-    <h1>Destination</h1>
+    <Header Url={headerBack}>
+      <Tab></Tab>
+    </Header>
   )
 }
