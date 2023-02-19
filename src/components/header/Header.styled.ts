@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface headerType {
   Url: string
+  flex: boolean
 }
 
 export const HeaderStyled = styled.header<headerType>`
@@ -23,11 +24,20 @@ export const HeaderStyled = styled.header<headerType>`
 
     padding: 1rem;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100%;
-    align-items: center;
-    justify-items: center;
+    ${(props) => props.flex  
+    ?
+     `display: flex;
+      align-items: center;
+      justify-content: space-evenly;`
+    :
+     `display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100%;
+      align-items: center;
+      justify-items: center;
+    `}
+     
+    
     /* grid-template-areas: 'a b'; */
     gap: 1rem;
   }

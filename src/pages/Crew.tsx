@@ -1,7 +1,16 @@
+
+import { Header } from "../components/header/Header";
+import crewBack from "../assets/background/crew.jpg"
+
+
+
+
 export function Crew() {
+
+  
   return(
-    <>
-      <h1>Crew</h1>
-    </>
+    <Header Url={crewBack} flex={true}>
+        
+    </Header>
   )
 }
