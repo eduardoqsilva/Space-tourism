@@ -20,10 +20,10 @@ export function Crew() {
     pagination: {
       clickable: true
     },
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // }
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    }
   }
   return(
     
