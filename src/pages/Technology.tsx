@@ -1,7 +1,13 @@
+import { Header } from "../components/header/Header";
+
+import technology from "../assets/background/technology.jpg"
+
 export function Technology() {
   return(
     <>
-      <h1>Technology</h1>
+      <Header Url={technology}>
+        
+      </Header>
     </>
   )
 }

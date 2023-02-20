@@ -1,16 +1,19 @@
 import { ReactNode } from 'react'
-import { HeaderStyled } from './Header.styled'
+import { HeaderStyled, headerType } from './Header.styled'
 
 
-interface HeaderType {
+interface HeaderType  extends headerType {
   children: ReactNode
-  Url: string
-  flex?: boolean
 }
 
-export function Header({ children, Url, flex = false }:HeaderType) {
+export function Header({ children, Url, flex = false, align='center', justify='center', hiddenX, hiddenY }:HeaderType) {
   return (
-    <HeaderStyled Url={Url} flex={flex}>
+    <HeaderStyled
+      Url={Url} flex={flex}
+      align={align} justify={justify}
+      hiddenX={hiddenX} hiddenY={hiddenY}
+    >
+      
       <main className='pageContent'>
         {children}
       </main>
