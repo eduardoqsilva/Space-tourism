@@ -161,7 +161,7 @@ export const NavBarStyled = styled.nav<navtype>`
         display: none;
     }
     & .logo {
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
   }
 `

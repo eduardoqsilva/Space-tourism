@@ -48,5 +48,16 @@ export const HeaderStyled = styled.header<headerType>`
     
     ${(props) => props.hiddenY ? `overflow-y: hidden;`: ''}
     ${(props) => props.hiddenX ? `overflow-x: hidden;`: ''}
+
+    @media (max-width: 900px){
+      /* background-color: red; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 1rem;
+    }
   }
+
+  
 `

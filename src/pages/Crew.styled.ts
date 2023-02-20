@@ -74,4 +74,56 @@ export const SlideStyled = styled.section`
       bottom: -2rem;
     }
   }
+
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+
+    & .img {
+      height: 250px;
+      width: 50%;
+      object-fit: contain;
+    
+      display: flex;
+      align-items: flex-end;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #fff;
+      padding: 1rem;
+      
+      /* background-color: red; */
+
+      & > img {
+        position: static;
+        bottom: 0rem;
+        height: 100%;
+        width: fit-content;
+      }
+    }
+
+    & .textWrapper{
+      
+      gap: 1rem;
+
+      &  h2 {
+        font-size: 1rem;
+      }
+      &  h1 {
+        font-size: 2em; 
+      }
+      &  p {
+        font-size: 1.125rem;
+      }
+      & .title {
+        font-size: 1.3rem;
+        left: 0;
+        right: 0;
+      }
+    }
+    
+  }
 `

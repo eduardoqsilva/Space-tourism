@@ -51,7 +51,40 @@ export const SliderStyled = styled.section`
       }
     }
   }
-  & .img{
 
+  @media (max-width: 900px) {
+    flex-direction: column;
+
+    .img {
+      width: 250px;
+      height: 250px;
+
+      & img {
+        display: block;
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+      }
+    }
+
+    & .textWrapper {
+      width: 100%;
+      max-width: 697px;
+      text-align: center;
+
+      & span {
+        font-size: 1rem;
+      }
+      & h1 {
+        font-size: 1.5rem;
+      }
+      & p {
+        font-size: 1.125rem;
+      }
+      & .title {
+        font-size: 1rem;
+        top: 0;
+      } 
+    }
   }
 `

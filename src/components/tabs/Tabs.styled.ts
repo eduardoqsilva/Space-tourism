@@ -73,6 +73,15 @@ export const ImageContainerStyled = styled.div`
       font-weight: 500;
     }
   }
+
+  @media (max-width: 900px){
+    align-items: center;
+
+    & > img {
+      width: 10.5625rem;
+      height: 10.5625rem;
+    }
+  }
 `
 
 export const TabContainerStyled = styled.section`
@@ -80,7 +89,7 @@ export const TabContainerStyled = styled.section`
   min-height: 24.0625rem;
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 400;
-
+  
  
   & div.content > h2 {
     font-family: 'Bellefair', sans-serif;
@@ -113,5 +122,19 @@ export const TabContainerStyled = styled.section`
     td,tr{
       padding-right: 4rem;
     }
+  }
+  @media (max-width: 900px) {
+    text-align: center;
+
+    & .table {
+      text-align: center;
+      margin: auto;
+      margin-top: 1rem;
+
+     & td,tr{
+      padding-right: 0rem;
+    }
+    }
+    
   }
 `
