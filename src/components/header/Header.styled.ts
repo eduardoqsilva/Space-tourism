@@ -11,8 +11,8 @@ export interface headerType {
 
 export const HeaderStyled = styled.header<headerType>`
   
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  min-height: 100vh;
   background-image: url(${ (props) => props.Url});
   background-size: cover;
   background-position: center center;
@@ -24,8 +24,9 @@ export const HeaderStyled = styled.header<headerType>`
     z-index: 2;
 
     width: 100%;
-    height: 100%;
-    min-height: calc(100vh - 9rem);
+    min-height: 100vh;
+    max-height: fit-content;
+    /* min-height: calc(100vh - 9rem); */
 
     padding: 1rem;
     padding-top: 8rem;

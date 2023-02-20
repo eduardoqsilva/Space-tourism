@@ -135,6 +135,9 @@ export const TabContainerStyled = styled.section`
       padding-right: 0rem;
     }
     }
+    & div.content > h2 {
+      font-size: 5rem;
+    }
     
   }
 `

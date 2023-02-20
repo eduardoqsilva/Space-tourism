@@ -8,12 +8,13 @@ export const SlideStyled = styled.section`
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   & .textWrapper{
     font-family: 'Bellefair', sans-serif;
     color: #fff;
 
-    position: relative;
+    /* position: relative; */
     
     max-width: 650px;
     width: 100%;
@@ -47,7 +48,7 @@ export const SlideStyled = styled.section`
     }
     & .title {
       position: absolute;
-      top: 1rem;
+      top: 0rem;
       
       color: #fff;
       font-size: 1.75rem;
@@ -94,6 +95,7 @@ export const SlideStyled = styled.section`
       justify-content: center;
       border-bottom: 1px solid #fff;
       padding: 1rem;
+      margin-top: 2rem;
       
       /* background-color: red; */
 

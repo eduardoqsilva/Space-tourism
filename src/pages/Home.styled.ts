@@ -38,6 +38,17 @@ export const ContentStyled = styled.article`
     }
 
   }
+  @media (max-width: 400px){
+    text-align: center;
+
+    & h2 {
+      font-size: 1.625rem;
+    }
+    & h1 {
+      font-size: 5.375rem;
+    }
+
+  }
 `
 
 export const ButtonStyled = styled.button`

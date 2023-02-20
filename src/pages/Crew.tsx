@@ -20,14 +20,14 @@ export function Crew() {
     pagination: {
       clickable: true
     },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    }
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // }
   }
   return(
     
-    <Header Url={crewBack} flex={true} align='flex-end' justify="center" hiddenY={true}>
+    <Header Url={crewBack} flex={true} align='flex-end' justify="center" hiddenY={false}>
 
         <Slider settings={settings}>
          
