@@ -30,6 +30,7 @@ export function Crew() {
     <Header Url={crewBack} flex={true} align='flex-end' justify="center" hiddenY={true}>
 
         <Slider settings={settings}>
+         
           <Slide>
             <SlideStyled>
               <div className="textWrapper">
@@ -93,6 +94,7 @@ export function Crew() {
               </div>
             </SlideStyled>
           </Slide>
+
         </Slider>
 
     </Header>
